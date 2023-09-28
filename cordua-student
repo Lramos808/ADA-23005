@@ -1,0 +1,99 @@
+class Student:
+    def __init__(self, name):
+        '''
+        Defines a student object
+        
+        
+        Parameters:
+            name str
+                    (required)
+                    name of the student
+                
+            enrolled_courses dict
+                    (optional)
+                    this is a dictionary of study count for the student with the course name as the dictionary key
+                    
+            completed_courses list
+                    (optional)
+                    this is a list of courses that the student has passed, ie: passed the test for a course
+                    
+            id str
+                    (automatically filled)
+                    this is a unique identifier for students that is automatically populated
+            
+             
+        courses: courses student is enrolled in
+        school: name of school student attends
+        gpa: current gpa of student to determine if they level up, pass, graduate, or fail
+        house: subsect of school they belong to
+        '''
+        from uuid import uuid1
+        
+        
+        self.name = name
+        self.enrolled_courses = {}
+        self.completed_courses = []
+        self.id = uuid1()
+        
+        
+    def get_name(self):
+        return self.name
+    
+
+    def set_name(self, name):
+        self.name = name
+    
+
+    def __str__(self):
+        return self.name        
+    
+    
+    def enroll_course():
+        self.enrolled_courses.update({course_list_from_school:0})
+        
+    
+    def get_enrolled_courses():
+        return self.enrolled_courses
+    
+    
+    def complete_courses():
+        self.completed_courses = []
+    
+    def get_completed_courses():
+        return self.completed_courses
+    
+   
+    def study(self):
+        '''        
+        asks what course the student is studying for and displays a list of courses in the 
+        enrolled_courses list.
+        accepts input from user for which course the student will study for.
+        prints out an affirmation of the completed study task.
+        '''
+        study_course = input(f'What course would you like to study for?\n {enrolled_courses.keys()} ')
+        enrolled_courses.get(study_course) += 1
+        print(f'{self.name} studied. They have studied {enrolled_courses.get(study_course)} times.')
+        
+       
+
+
+    def take_test(self, course):
+        '''
+        How to run: student_name.take_test(course_name)
+        
+        checks enrolled_courses dictionary for the given course_name key and pulls the value of 
+        the study counter, if the counter is under four they fail the test and the code returns 
+        False, if the counter is over 4 they pass the test and return True.
+        '''
+        if enrolled_course.get(course) < 4:
+            print(f'{self.name} did not pass.')
+            enrolled_courses.update(course:0)
+            return False
+        
+        elif enrolled_course.get(course) >= 4:
+            print(f'{self.name} passed!')
+            completed_courses.append(course)
+            enrolled_courses.pop(course)
+            return True
+
+            
