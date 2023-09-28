@@ -1,13 +1,10 @@
 class School:
     def __init__(self, name):
 
-        from uuid import uuid1
-
         self.name = name
         self.student_list = []
         #self.years = {}
         self.course_list = []
-        self.id = uuid1()
     
     def set_name(self, name):
         self.name = name
@@ -58,6 +55,8 @@ class Student:
         gpa: current gpa of student to determine if they level up, pass, graduate, or fail
         house: subsect of school they belong to
         '''
+        from uuid import uuid1
+
         study_counter = 0
         
         
@@ -67,6 +66,7 @@ class Student:
         self.enrolled_courses = {}
         self.completed_courses = []
         self.school = 
+        self.id = uuid1()
         
 # creates a function that will restrieve the name put into the class   
     def get_name(self):
