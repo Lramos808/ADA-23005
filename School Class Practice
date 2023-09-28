@@ -125,8 +125,7 @@ class Student:
         self.grade_level += 1
         if self.grade_level > 7:
             graduate():
-        
-#       
+              
     def enroll_in_course():
 
     def take_test():
@@ -143,9 +142,3 @@ class Student:
             return True
 
             
-# if __name__ == '__main__':
-#     print("I am running directly from the file!")
-
-# when this file is imported into jupyter, this section of code will run as it is not inside of the class/other functions contained   in the class
-# new_student = Student('Spongebob Squarepants')
-# print(new_student)
