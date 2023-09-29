@@ -18,7 +18,7 @@ class Lookup:
         - return car
         
         """
-        listing_of_cars = {}
+        self.listing_of_cars = {}
 
     
     def add_car(self, car):
@@ -30,19 +30,19 @@ class Lookup:
         
     
     def display_car(self, car):
-        
+        pass
     
     
     def search_for_car(self):
-        return_makes()
+        self.return_makes()
 
         make = input('What is the make of the car you\'re looking for?')
         
-        return_models(make)
+        self.return_models(make)
                 
         model = input('What is the model of the car you\'re looking for?')
         
-        return_years(make, model)
+        self.return_years(make, model)
 
         year = input('Which year are you looking for?')
         
@@ -53,39 +53,37 @@ class Lookup:
 
     def return_makes(self):
         makes = set()
-        for car in listing_of_cars.values:
+        for car in self.listing_of_cars.values():
             makes.add(car.make)
         
-        print makes 
-        
+        print(makes) 
+    
     
     def return_models(self, make):
         models = set()
-        for car in listing_of_cars.values():
+        for car in self.listing_of_cars.values():
             if car.make == make:
                 models.add(car.model)
             
-        print models
+        print(models)
     
     
     def return_years(self, make, model):
         years = set()
-        for car in listing_of_cars.values():
+        for car in self.listing_of_cars.values():
             if car.make == make and car.model == model:
                 years.add(car.year)
         
-        print years
+        print(years)
     
     def return_car(self, make, model, year):
         cars = set()
-        for car in listing_of_cars.values():
+        for car in self.listing_of_cars.values():
             if car.make == make and car.model == model and car.year == year:
                 cars.add(car)
                 
         car = cars[0]
         
         return car
-        
-            
-                
+
     
