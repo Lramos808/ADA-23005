@@ -10,6 +10,9 @@ lines.pop(0) # this is header info, we don't need
 lines.pop() # looks like \n is here which will break our object init
 
 database = list()
+lookup = Lookup()
+
 for x in lines:
     database.append(Car(x.split(",")))
+    lookup.add_car(Car(x.split(",")))
     
