@@ -30,7 +30,7 @@ class Lookup:
         
     
     def display_car(self, car):
-        pass
+        return car.__str__()
     
     
     def search_for_car(self):
@@ -46,9 +46,7 @@ class Lookup:
 
         year = input('Which year are you looking for?')
         
-        car = return_car(make, model, year)
-        
-        return car
+        return self.return_car(make, model, year)
 
 
     def return_makes(self):
@@ -82,7 +80,7 @@ class Lookup:
             if car.make == make and car.model == model and car.year == year:
                 cars.add(car)
                 
-        car = cars[0]
+        car = cars.pop()
         
         return car
 
