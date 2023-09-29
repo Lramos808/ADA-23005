@@ -95,5 +95,3 @@ class Student:
             completed_courses.append(course)
             enrolled_courses.pop(course)
             return True
-
-            
