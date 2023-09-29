@@ -1,0 +1,8 @@
+class Beer():
+""" This class creates a beer object with the __init__ function needing(brewery_id, name, style, abv) """
+    
+    def __init__(self, brewery_id, name, style, abv):
+        self.brewery_id = brewery_id
+        self.name = name
+        self.style = style
+        self.abv = abv
