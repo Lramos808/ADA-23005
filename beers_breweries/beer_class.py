@@ -1,4 +1,4 @@
-class Beer():
+class Beer:
     """ 
     This class creates a beer object with the __init__ function needing(brewery_id, name, style, abv) 
     """
@@ -9,6 +9,15 @@ class Beer():
         self.style = style
         self.abv = abv
         self.id = beer_id
+        self.brewery = None
+        
+    
+    def
+        
+    
+    def __str__(self):
+        return f"
+    
     
     if __name__ == '__main__':
         print("Running for debug")
