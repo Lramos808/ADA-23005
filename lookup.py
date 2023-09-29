@@ -30,7 +30,7 @@ class Lookup:
         
     
     def display_car(self, car):
-        
+        pass
     
     
     def search_for_car(self):
@@ -56,8 +56,8 @@ class Lookup:
         for car in listing_of_cars.values:
             makes.add(car.make)
         
-        print makes 
-        
+        print(makes) 
+    
     
     def return_models(self, make):
         models = set()
@@ -65,7 +65,7 @@ class Lookup:
             if car.make == make:
                 models.add(car.model)
             
-        print models
+        print(models)
     
     
     def return_years(self, make, model):
@@ -74,7 +74,7 @@ class Lookup:
             if car.make == make and car.model == model:
                 years.add(car.year)
         
-        print years
+        print(years)
     
     def return_car(self, make, model, year):
         cars = set()
@@ -86,6 +86,8 @@ class Lookup:
         
         return car
         
+    if __name__ == '__main__':
+        print("Run from class like main")
             
                 
     
