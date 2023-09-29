@@ -1,10 +1,10 @@
 class Breweries:
-    def __init__(self, b_id, name, state, city):
-        self.b_id = b_id
-        self.name = name
-        self.state = state
+    def __init__(self, data):
+        self.b_id = data[0]
+        self.name = name[1]
+        self.city = data[2]
+        self.state = state[3]
         self.beers = []
-        self.city = city
         
     
     def add_beer(self, beer):
