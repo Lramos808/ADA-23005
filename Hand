@@ -8,7 +8,7 @@ class Hand:
     card_values = []
     card_suits = []
 
-    def hand_type(self, list_of_card_obj)
+    def hand_type(self, list_of_card_obj):
         hand_dic = {"one_pair":0,
                     "two_pair":1,
                     "three_of_a_kind":2,
@@ -50,7 +50,7 @@ class Hand:
                     self.hand_type = hand_dic.get('four_of_a_kind')
                     self.high_card = value
 
-                elif card_count == 2 or card_count == 3
+                elif card_count == 2 or card_count == 3:
                         self.hand_type = hand_dic.get('full_house')
                         self.high_card = max(values)
 
@@ -58,7 +58,7 @@ class Hand:
             self.hand_type = hand_dic.get('flush')
             self.high_card = max(values)
 
-        elif len(set(card_values)) == 3
+        elif len(set(card_values)) == 3:
                 for values in card_values:
                     card_count = card_values.count(values)
                     if card_count == 3:
@@ -75,10 +75,10 @@ class Hand:
 
         elif len(set(card_values)) == 4:
             for values in card_values:
-                card_count = card_values.count(values):
-                    if card_count == 2:
-                        self.hand_type = hand_dic.get('one_pair')
-                        self.high_card = values
+                card_count = card_values.count(values)
+                if card_count == 2:
+                    self.hand_type = hand_dic.get('one_pair')
+                    self.high_card = values
 
         elif len(set(card_values)) == 5:
             self.high_card = max_card_values
