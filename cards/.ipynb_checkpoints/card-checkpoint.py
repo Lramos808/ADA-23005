@@ -2,7 +2,6 @@ from dataclasses import dataclass
 
 @dataclass
 class Card:
-    card: str
     face: str
     suit: str
     card_value: int = 0
@@ -11,6 +10,14 @@ class Card:
         value_convert = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 
                        'Q':12, 'K':13, 'A':14}
         self.card_value = value_convert[self.face]
+    
+    
+    def get_card_value(self):
+        return self.card_value
+    
+    
+    def get_suit(self):
+        return self.suit
         
      
     def __str__(self):
