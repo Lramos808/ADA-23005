@@ -23,7 +23,7 @@ class Node:
     def set_right(self, right):
         self.right = right
         
-    if __name__ == '__name__':
+    if __name__ == '__main__':
         
         
 
