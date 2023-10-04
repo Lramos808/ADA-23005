@@ -50,9 +50,8 @@ class Node:
     def determine_greater(self):
         if self.left.get_sum_value() > self.right.get_sum_value():
             self.left.set_marker(True)
-            self.add_sum_value(self.left.get_sum_value)
+            self.sum_value += self.left.get_sum_value()
             
         else: 
             self.right.set_marker(True)
-            self.add_sum_value(self.right.get_sum_value)
-                
+            self.sum_value += self.right.get_sum_value()
