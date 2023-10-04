@@ -2,10 +2,9 @@ class Node:
 
     def __init__(self, value, index):
         self.value = value
-        self.left = None
-        self.right = None
+        self.left = index[0] + 1, index[1]
+        self.right = index[0] + 1, index[1] + 1
         self.index = index
-        self.path_length = None
         
     def get_value(self):
         return self.value
@@ -27,6 +26,7 @@ class Node:
     
     def get_index(self):
         return self.index
+    
         
 
         
