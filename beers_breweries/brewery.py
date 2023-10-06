@@ -27,6 +27,6 @@ if __name__ == "__main__":
         for line in f:
             line = line.replace("\n", "")
             line = line.split(",")
-            brewery_obj.append(Breweries(*line))
+            brewery_obj.append(Brewery(*line))
             
     brewery_obj.pop(0)
