@@ -23,11 +23,13 @@ class Brewery:
 """ The following code imports the breweries.csv and creates a list of brewery objects called brewery_obj"""
 
 if __name__ == "__main__":
+    import csv
     brewery_obj = []
-    with open("breweries.csv", "r") as f:
-        for line in f:
-            line = line.replace("\n", "")
-            line = line.split(",")
-            brewery_obj.append(Brewery(*line))
-            
-    brewery_obj.pop(0)
+    with open("breweries.csv", "r", newline="\n") as f:
+    f.readline()
+    file_read = csv.reader(f, delimiter=",")
+    for line in file_read:
+        brewery_obj.append(Brewery(brewery_id=int(line[0]), 
+                                   name=(line[1]), 
+                                   city=(line[2]), 
+                                   state=line[3]))
