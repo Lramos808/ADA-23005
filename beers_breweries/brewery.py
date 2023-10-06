@@ -26,10 +26,10 @@ if __name__ == "__main__":
     import csv
     brewery_obj = []
     with open("breweries.csv", "r", newline="\n") as f:
-    f.readline()
-    file_read = csv.reader(f, delimiter=",")
-    for line in file_read:
-        brewery_obj.append(Brewery(brewery_id=int(line[0]), 
-                                   name=(line[1]), 
-                                   city=(line[2]), 
-                                   state=line[3]))
+        f.readline()
+        file_read = csv.reader(f, delimiter=",")
+        for line in file_read:
+            brewery_obj.append(Brewery(brewery_id=int(line[0]), 
+                                       name=(line[1]), 
+                                       city=(line[2]), 
+                                       state=line[3]))

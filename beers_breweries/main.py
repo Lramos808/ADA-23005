@@ -1,5 +1,6 @@
 from beer import Beer
 from brewery import Brewery
+from setter import setter
 import csv
 
 beers = []
@@ -19,8 +20,17 @@ with open("beers.csv", "r") as f:
         temp = [elm if elm else None for elm in temp]
         
         beers.append(temp)
-        
-        
+
+brewery_obj = []
+with open("breweries.csv", "r") as f:
+    breweries = list(csv.reader(f, delimiter=','))[1:]
+
+for line in breweries:
+    brewery_obj.append(Brewery(brewery_id=int(line[0]),
+                           name=line[1],
+                           city=line[2],
+                           state=line[3]))
+
 beer_list = []
 for idx, beer in enumerate(beers):
     new_beer = Beer(beer_index=int(beer[0]),
@@ -32,18 +42,8 @@ for idx, beer in enumerate(beers):
                     brewery_id=int(beer[6]),
                     ounces=float(beer[7]))
     
+    setter(new_beer, brewery_obj)
     beer_list.append(new_beer)
 
-brewery_obj = []
-with open("breweries.csv", "r") as f:
-    f.readline()
-    for line in f:
-        line = line.replace("\n", "")
-        line = line.split(",")
-        brewery_obj.append(Brewery(brewery_id=int(line[0]),
-                                   name=line[1],
-                                   city=line[2],
-                                   state=line[3]))
-
-print(len(brewery_obj), len(beer_list))
-
+for x in beer_list:
+    print(x.brewery)

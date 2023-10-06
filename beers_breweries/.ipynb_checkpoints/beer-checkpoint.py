@@ -18,15 +18,8 @@ class Beer():
     brewery_id: int
     ounces: float
     brewery: object = field(default=None)
-    
-    
-    def check_empty(self, thing):
-        if thing == '':
-            return None
-        else:
-            return float(thing)
-        
-    
+
+
     def __str__(self):
         return f'{self.name}: {self.style} from {self.brewery}'
 
