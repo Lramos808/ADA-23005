@@ -19,16 +19,6 @@ class Beer():
     ounces: float
     brewery: object = field(default=None)
     
-        
-
-    # def __post_init__(self):
-    #     self.beer_index = int(self.beer_index)
-    #     self.abv = self.check_empty()
-    #     self.ibu = self.check_empty()
-    #     self.beer_id = int(self.beer_id)
-    #     self.brewery_id = int(self.brewery_id)
-    #     self.ounces = int(self.ounces)
-    
     
     def check_empty(self, thing):
         if thing == '':

@@ -1,6 +1,6 @@
 from beer import Beer
+from brewery import Brewery
 import csv
-
 
 beers = []
 with open("beers.csv", "r") as f:
@@ -34,8 +34,16 @@ for idx, beer in enumerate(beers):
     
     beer_list.append(new_beer)
 
-    
-print(beer_list[0])
-print(beer_list[103])
-print(beer_list[382])
+brewery_obj = []
+with open("breweries.csv", "r") as f:
+    f.readline()
+    for line in f:
+        line = line.replace("\n", "")
+        line = line.split(",")
+        brewery_obj.append(Brewery(brewery_id=int(line[0]),
+                                   name=line[1],
+                                   city=line[2],
+                                   state=line[3]))
+
+print(len(brewery_obj), len(beer_list))
 
