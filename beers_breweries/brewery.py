@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 
 @dataclass (order=True)
 
-class Breweries:
+class Brewery:
   """ 
   This dataclass takes a list with 3 freatures; name, city and state. The brewery object instanciated will also have an empty beer_list
   The dataclass also contains one method, add_beer_obj(self, beer) there it takes a beer object and appends to list
