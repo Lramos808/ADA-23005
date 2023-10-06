@@ -1,0 +1,21 @@
+#Creating a list of lists and then creating a node class 
+
+triangle_list = []
+with open("triangle.txt", "r", newline = "\n") as f:
+        for number in f:
+            number_list = []
+            number = number.rstrip("\n").split(" ")
+            for num in number:
+                num = int(num)
+                number_list.append(num)
+            triangle_list.append(number_list)
+            
+small_tri = triangle_list[0:5]
+
+tri_sum = 0
+counter = 0
+
+while counter < len(small_tri):
+    tri_sum += triangle_list[0]
+    print(triangle_list[0])
+    
