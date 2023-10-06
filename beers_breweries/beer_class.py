@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+
+@dataclass
 class Beer():
     """ 
     This class creates a beer object with the __init__ function needing(brewery_id, beer_id, name, style, abv) 
@@ -12,16 +15,6 @@ class Beer():
         self.name = name
         self.style = style
         self.abv = abv
-        
-    def get_brewery_id(self):
-        return self.brewery_id
-    
-    def get_beer_id(self):
-        return self.beer_id
-    
-    def get_beer_info(self):
-        return f'{self.name} {self.style}'
-
     
     if __name__ == '__main__':
         print("Running for debug")
